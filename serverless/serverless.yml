@@ -1,0 +1,37 @@
+service: crypto-balance-service
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: us-east-1
+  memorySize: 256
+  timeout: 10
+
+functions:
+  root:
+    handler: handler.root
+    events:
+      - http:
+          path: /
+          method: get
+          cors: true
+
+  getBalance:
+    handler: handler.root
+    events:
+      - http:
+          path: balance/{service}
+          method: get
+          cors: true
+          request:
+            parameters:
+              paths:
+                service: true
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    httpPort: 3000
