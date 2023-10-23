@@ -36,6 +36,24 @@ Track all your web3 and web2 assets in one place! Cryptrack aggregates your port
    npm install
    ```
 
+#### Environment Variables:
+
+1. Open the `.env` file in your preferred text editor and set up your credentials:
+
+   ```plaintext
+   KRAKEN_API_KEY=YOUR_KRAKEN_API_KEY
+   KRAKEN_SECRET=YOUR_KRAKEN_SECRET
+   COINBASE_OAUTH_TOKEN=YOUR_COINBASE_OAUTH_TOKEN
+   DATABASE_URL=YOUR_DATABASE_URL
+   JWT_SECRET=YOUR_JWT_SECRET
+   REDIS_PORT=YOUR_REDIS_PORT
+   REDIS_HOST=YOUR_REDIS_HOST
+   REDIS_PASSWORD=YOUR_REDIS_PASSWORD
+   ```
+
+Replace the placeholders (`YOUR_KRAKEN_API_KEY`, `YOUR_KRAKEN_SECRET`, etc.) with your actual credentials.
+
+
 #### Local Development with Serverless:
 
 1. Ensure you have the `serverless-offline` plugin installed (this should be part of your setup).
